@@ -3,7 +3,6 @@ a2 = [1.99, 1.99, 0.99, 1.99, 0.99, 1.99, 0.99, 0.99]
 a3 = [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01]
 a4 = [10.01, -12.22, 0.23, 19.20, -5.13, 3.12]
 
-
 def process_array(num, arr):
     print("\nProcessing Array({}): \n\n".format(num))
     print(arr)
@@ -13,7 +12,6 @@ def process_array(num, arr):
         total = total +i;
         total= float(round(total,2))
     print("\nThe total is {}:\n".format(total))
-
 
 print("Problem 2")
 process_array(1, a1)
