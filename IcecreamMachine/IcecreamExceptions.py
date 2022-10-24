@@ -2,7 +2,8 @@ class OutOfStockException(Exception):
     """Raised when something is out of stock"""
     pass
 
-# My ucid is ar2576 and this code was done in 10/22/2022 by passing a display message indicating the exceptions and printing the same in the output when encountered an exception 
+# My ucid is ar2576 and this code was done in 10/22/2022 by passing a display message indicating the exceptions and printing the same in the output when encountered 
+# an exception 
 class NeedsCleaningException(Exception):
     display = "We are cleaning the machine, Can you like check in after sometime?."
     """Raised when the icecream machine needs cleaning"""
