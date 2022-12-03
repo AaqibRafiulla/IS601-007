@@ -14,6 +14,7 @@
         limit
         ensure all fields prefill with request arg data if provided
         #}
+        {# Added horizontal filter/sort form with name (company name) country/state (provided) sort/order using allowed_columns and provided partial template - Aaqib Rafiulla,ar2576, Dec 3, 2022 #}
         <div class="form-group mb-3">
             <label for="first_name">First name</label>
             <input type="text" class="form-control" id="first_name" name="first_name"  placeholder="Enter first name">
@@ -52,6 +53,7 @@
             <tr class="text-capitalize">
                 {# generate th tags for each column to display #}
                 {# IMPORTANT use table column names as the headings, replace _ with space #}
+                {# Added th tags for each columns - Aaqib Rafiulla, ar2576, Dec 3, 2022 #}
                 <th>Employee id</th>
                 <th>First name</th>
                 <th>Last name</th>
@@ -66,6 +68,7 @@
             an edit button that passes the employee id to employee edit
             a delete button that passes the employee id and the request args to the employee delete route
             #}
+            {# generated tr with td tags for each piece of data # - Aaqib Rafiulla, ar2576, Dec 3, 2022}
             {%for row in rows%}
                 <tr>
                     <td>{{row.id}}</td>
