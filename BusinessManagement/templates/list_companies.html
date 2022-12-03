@@ -11,20 +11,30 @@
     limit
     ensure all fields prefill with request arg data if provided
     #}
+    {# Added horizontal filter/sort form with name (company name) country/state (provided) sort/order using allowed_columns and provided partial template - Aaqib Rafiulla,ar2576, Dec 3, 2022 #}
     <form method="GET">
         {% with layout = "horizontal" %}
+        <div class="form-group mb-3">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name"  placeholder="Enter name">
+          </div>
         {% include "country_state_selector.html" %}
         {% endwith %}
-        {% with cols = [] %}
+        {% with cols = allowed_list %}
         {% include "sort_filter.html" %}
         {% endwith %}
-        
-        <div class="col-12">
+        <div class="form-group mb-3">
+            <label for="limit">Limit</label>
+            <input type="text" class="form-control" id="limit" name="limit" placeholder="Set limit">
+          </div>
+        <div>
+        <span class="col-4">
             <input type="submit" class="btn btn-primary" value="Filter" />
-        </div>
-        <div class="col-12">
+        </span>
+        <span class="col-4">
             <a href="?" class="btn btn-secondary">Reset</a>
-        </div>
+        </span>
+    </div>
     </form>
     <div class="table-responsive">
     <table class="table">
@@ -33,6 +43,15 @@
             <tr class="text-capitalize">
                 {# generate th tags for each column to display #}
                 {# IMPORTANT use table column names as the headings, replace _ with space #}
+                {# Added th tags for each columns - Aaqib Rafiulla, ar2576, Dec 3, 2022 #}
+                <th>Company id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Website</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -46,6 +65,24 @@
             an edit button that passes the company id to company edit
             a delete button that passes the company id and the request args to the company delete route
             #}
+            {# generated tr with td tags for each piece of data # - Aaqib Rafiulla, ar2576, Dec 3, 2022}
+            {%for row in rows%}
+                <tr>
+                    <td>{{row.id}}</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.address}}</td>
+                    <td>{{row.city}}</td>
+                    <td>{{row.country}}</td>
+                    <td>{{row.state}}</td>
+                    <td>{{row.zip}}</td>
+                    <td><a href={{row.website}}>{{row.website}}</a></td>
+                    <td>
+                        <a href="/company/search?company_name={{row.name}}" class="btn btn-primary">View</a>
+                        <a href="/company/edit?id={{row.id}}" class="btn btn-secondary">Edit</a>
+                        <a href="/company/delete?id={{row.id}}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            {%endfor%}
         </tbody>
         {% else %}
         <tbody>
