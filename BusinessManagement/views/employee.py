@@ -65,7 +65,7 @@ def search():
         flash('Error while fetching data:', e)
         flash('There was an error fetching the required data', "danger")
     # hint: use allowed_columns in template to generate sort dropdown
-    return render_template("list_employees.html", rows=rows, allowed_columns=allowed_columns)
+    return render_template("list_employees.html", rows=rows, allowed_list=allowed_list)
 
 @employee.route("/add", methods=["GET","POST"])
 def add():
