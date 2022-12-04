@@ -124,7 +124,7 @@ def edit():
             if(has_error):
                 return render_template("edit_employee.html",row={},value=None)
             data = [form_data.get('first_name'), form_data.get('last_name'), form_data.get('company',None),\
-                form_data.get('email',None),employee_id]
+                form_data.get('email',''),employee_id]
             print('The arguments for emplyee edit:',data)
             try:
                 # TODO edit-6 fill in proper update query

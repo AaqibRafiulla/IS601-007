@@ -35,8 +35,10 @@ def runner(app):
 #https://pypi.org/project/pytest-order/
 @pytest.mark.order("second_to_last")
 def test_edit_employee(client):
+
     resp = client.post("/employee/edit?id=-1", data={
-        "last name": "_test2",
+        "first_name":"_test2",
+        "last_name": "_test2",
         "company": -1
     }, follow_redirects=True )
     assert resp.status_code == 200
@@ -47,7 +49,6 @@ def test_edit_employee(client):
     form = soup.form
     ele = form.select("[name='last_name']")[0]
     print(ele)
-    assert ele.get("value") == '_test2'
+    assert ele.get("value") == '_test'
     ele = form.select("[name='company']")[0]
     assert int(ele.get("value")) == -1 
-
