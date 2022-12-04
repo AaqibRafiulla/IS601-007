@@ -18,6 +18,8 @@ def importCSV():
         if file.filename == '':
             flash('No selected file', "warning")
             return redirect(request.url)
+            # TODO importcsv-1 check that it's a .csv file, return a proper flash message if it's not
+            # Added code to check if it is a csv file and also print a flash message if it's not - Aaqib Rafiulla, ar2576, Nov 28 2022
         if not re.search(r'.\.csv',file.filename):
             flash('Invalid file selected. Only CSV allowed','warning')
             return redirect(request.url)
@@ -36,11 +38,17 @@ def importCSV():
             """
             # Note: this reads the file as a stream instead of requiring us to save it
             stream = io.TextIOWrapper(file.stream._file, "UTF8", newline=None)
+            # TODO importcsv-2 read the csv file stream as a dict
+            # Added code to read the csv file as a dict - Aaqib Rafiulla, ar2576, Nov 28, 2022
             data_dict = csv.DictReader(stream,delimiter=',')
             for data in data_dict:
+                # TODO importcsv-3 extract company data and append to company list as a dict only with company data
+                # Added code to retrieve company data and append to company list as dict - Aaqib Rafiulla, ar2576, Nov 28,2022
                 if data["company_name"] and data["address"] and data["city"] and data["state"] and data["zip"] and data["web"]:
                     companies.append({'name': data['company_name'],'address':data['address'],'city':data['city'],\
                         'country':data['country'],'state':data['state'],'zip':data['zip'],'website':data['web']})
+                        # TODO importcsv-4 extract employee data and append to employee list as a dict only with employee data
+                        # Added code to extract employee data and append to employee list as a dict - Aaqib Rafiulla, ar2576, Nov 28,2022
                 if data["first_name"] and data["last_name"] and data["email"] and data["company_name"]:
                     employees.append({'first_name':data['first_name'],'last_name':data['last_name'],'email':data['email'],'company_name':data['company_name']})
             
@@ -48,20 +56,28 @@ def importCSV():
                 print(f"Inserting or updating {len(companies)} companies")
                 try:
                     result = DB.insertMany(company_query, companies)
+                    # TODO importcsv-5 display flash message about number of companies inserted
+                    # Added code to display flash message showing companies inserted successfully - Aaqib Rafiulla, ar2576, Nov 28,2022
                     flash('{} companies successfully inserted'.format(len(companies)), 'info')
                 except Exception as e:
                     traceback.print_exc()
                     flash("There was an error loading in the csv data", "danger")
             else:
+                # TODO importcsv-6 display flash message (info) that no companies were loaded
+                # Added code to display flash message showing no companies were uplooded - Aaqib Rafiulla, ar2576, Nov 28, 2022
                 flash('There is no company data in the uploaded file','info')
             if len(employees) > 0:
                 print(f"Inserting or updating {len(employees)} employees")
                 try:
                     result = DB.insertMany(employee_query, employees)
+                    # TODO importcsv-7 display flash message about number of employees loaded
+                    # Added code to display flash message about number of employees loaded - Aaqib Rafiulla, ar2576, Nov 28, 2022
                     flash('{} employees successfully inserted'.format(len(employees)), 'info')
                 except Exception as e:
                     traceback.print_exc()
                     flash("There was an error loading in the csv data", "danger")
             else:
+                # TODO importcsv-8 display flash message (info) that no companies were loaded
+                # Added flash message to display no companies were loaded - Aaqib Rafiulla, ar2576, Nov 28, 2022
                  flash('There is no employee data in the uploaded file','info')
     return render_template("upload.html")
