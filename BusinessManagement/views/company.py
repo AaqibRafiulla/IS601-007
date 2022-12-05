@@ -93,7 +93,7 @@ def add():
         # TODO add-5 state is required (flash proper error message)
         # Added code to get city and print flash error message - Aaqib Rafiulla, ar2576, Dec 1,2022
         if(not requestArgs.get('state')):
-            flash('City is required!','danger')
+            flash('State is required!','danger')
             has_error=True
         # TODO add-6 country is required (flash proper error message)
         # Added code to get country and print flash error message - Aaqib Rafiulla, ar2576, Dec 1,2022
