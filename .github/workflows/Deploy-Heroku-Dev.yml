@@ -7,6 +7,10 @@ on:
   push:
     branches:
       - dev
+<<<<<<< HEAD
+=======
+      - Milestone-1
+>>>>>>> 6fd63c0ff456934a8772d0eefcbb80bdac2e25d1
       - Milestones-2
 
 # Your workflows jobs.
