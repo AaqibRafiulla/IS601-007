@@ -41,8 +41,7 @@
                 {# {% set samples = [
                 ("sample.add", "Add"),
                 ("sample.list", "List"),
-                ] %}
-                {{dropdown_nav("Samples", samples)}} #}
+                ] %} {{dropdown_nav("Samples", samples)}} #}
                 <!-- roles nav (requires admin )-->
                 {% if current_user.has_role("Admin") %}
                 {% set roles = [
