@@ -9,6 +9,7 @@ on:
       - prod
       - Milestone-1
       - Milestones-2
+      - Milestone-3
 
 # Your workflows jobs.
 jobs:
