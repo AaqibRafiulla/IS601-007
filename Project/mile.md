@@ -1,6 +1,6 @@
 <table><tr><td> <em>Assignment: </em> IS601 Milestone1 Deliverable</td></tr>
 <tr><td> <em>Student: </em> Aaqib Rafiulla (ar2576)</td></tr>
-<tr><td> <em>Generated: </em> 12/11/2022 10:04:05 PM</td></tr>
+<tr><td> <em>Generated: </em> 12/11/2022 10:12:57 PM</td></tr>
 <tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IS601-007-F22/is601-milestone1-deliverable/grade/ar2576" target="_blank">Grading</a></td></tr></table>
 <table><tr><td> <em>Instructions: </em> <ol><li>Checkout Milestone1 branch</li><li>Create a milestone1.md file in your Project folder</li><li>Git add/commit/push this empty file to Milestone1 (you'll need the link later)</li><li>Ensure your images display correctly in the sample markdown at the bottom</li><ol><li>NOTE: You may want to try to capture as much checklist evidence in your screenshots as possible, you do not need individual screenshots and are recommended to combine things when possible. Also, some screenshots may be reused if applicable.</li></ol><li>Save the submission items</li><li>Copy/paste the markdown from the "Copy markdown to clipboard link" or via the download button</li><li>Paste the code into the milestone1.md file or overwrite the file</li><li>Git add/commit/push the md file to Milestone1</li><li>Double check the images load when viewing the markdown file (points will be lost for invalid/non-loading images)</li><li>Make a pull request from Milestone1 to dev and merge it (resolve any conflicts)<ol><li>Make sure everything looks ok on heroku dev</li></ol></li><li>Make a pull request from dev to prod (resolve any conflicts)<ol><li>Make sure everything looks ok on heroku prod</li></ol></li><li>Submit the direct link from github prod branch to the milestone1.md file (no other links will be accepted and will result in 0)</li></ol></td></tr></table>
 <table><tr><td> <em>Deliverable 1: </em> Feature: User will be able to register a new account </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
@@ -186,10 +186,10 @@
 <tr><td> <em>Caption:</em> <p>Profile before updating for user aaqib_1&#39;s email in DB<br></p>
 </td></tr>
 <tr><td><img width="768px" src="https://user-images.githubusercontent.com/113788539/206945293-4e33f84c-01e6-446c-b1c3-dcd3c7be7efc.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>Profile after updating email to <a href="mailto:&#x61;&#97;&#113;&#105;&#x62;&#x5f;&#49;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#x61;&#97;&#113;&#105;&#x62;&#x5f;&#49;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a><br></p>
+<tr><td> <em>Caption:</em> <p>Profile after updating email to <a href="mailto:&#x61;&#x61;&#113;&#x69;&#x62;&#95;&#49;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">&#x61;&#x61;&#113;&#x69;&#x62;&#95;&#49;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a><br></p>
 </td></tr>
 <tr><td><img width="768px" src="https://user-images.githubusercontent.com/113788539/206945415-6b7941b9-09bf-491e-ac82-fd5644eb78d2.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>Profile after updating email to <a href="mailto:&#97;&#97;&#x71;&#105;&#x62;&#x5f;&#49;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#97;&#97;&#x71;&#105;&#x62;&#x5f;&#49;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a> in DB<br></p>
+<tr><td> <em>Caption:</em> <p>Profile after updating email to <a href="mailto:&#97;&#97;&#113;&#105;&#98;&#x5f;&#x31;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#109;">&#97;&#97;&#113;&#105;&#98;&#x5f;&#x31;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#109;</a> in DB<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 3: </em> Add the related pull request(s) for this feature</td></tr>
