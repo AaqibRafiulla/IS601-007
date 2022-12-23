@@ -254,7 +254,7 @@ def purchase():
             details = f"Spent {total} on {quantity} upgrades" # TBD
             current_user.account.remove_points(-total, reason="purchase", details=details)
             DB.getDB().commit()
-            #flash("Purchase successful!", "success")
+            flash("Purchase successful!", "success")
         else:
             return redirect(url_for("shop.cart"))
     except Exception as e:
